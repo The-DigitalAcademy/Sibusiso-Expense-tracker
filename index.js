@@ -1,6 +1,6 @@
 var state = {
     array: [],
-    balance: 0,
+    balance: 1000,
     income: 0,
     expense: 0,
     items: [
@@ -44,9 +44,9 @@ function addExpense() {
 
 //run for browser
 
-function broswer() {
+function browser() {
     balanceState.innerHTML = `R${state.balance}`
     incomeState.innerHTML = `R${state.income}`
     expenseState.innerHTML = `R${state.expense}`
 }
-broswer();
+browser();

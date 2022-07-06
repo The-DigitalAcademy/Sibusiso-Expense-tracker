@@ -34,6 +34,8 @@ body{
     font-weight: bold;
     font-size: 15px;
     background-color: greenyellow;
+    border-radius: 5px;
+    border: none;
 }
 
 .btn2{
@@ -43,6 +45,8 @@ body{
     font-weight: bold;
     font-size: 15px;
     background-color: red;
+    border-radius: 5px;
+    border: none;
 }
 
 .display{
@@ -74,4 +78,14 @@ body{
 
 table, th, td{
     border: solid 1px grey;
+}
+
+.btn1:hover{
+    transform: scale(1.1);
+    transition: 0s;
+}
+
+.btn2:hover{
+    transform: scale(1.1);
+    transition: 0s;
 }
