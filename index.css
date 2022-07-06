@@ -1,0 +1,78 @@
+body {
+    background: gainsboro;
+}
+
+.control-A {
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 15px;
+    border: none;
+}
+
+.control-B{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+    border: none;
+}
+
+.incomeBtn{
+    margin-top: 9px;
+    width: 140px;
+    height: 30px;
+    margin-left: 120px;
+    font-weight: bold;
+    background-color: green;
+    box-shadow: 1px 1px 1px;
+}
+
+.expenseBtn{
+    margin-top: 9px;
+    width: 140px;
+    height: 30px;
+    margin-left: 30px;
+    font-weight: bold;
+    background-color: red;
+    box-shadow: 1px 1px 1px;
+}
+
+.table{
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 550px;
+    height: 200px;
+    border: solid slategray;
+}
+
+.display h3{
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.display a{
+    font-weight: bold;
+    margin-top: 36px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 390px;
+}
+
+form{
+    margin-left: 200px;
+}
+
+.display{
+    display: flex;
+    text-align: center;
+    margin-left: 200px;
+    border: solid slategrey;
+    width: 550px;
+}
+
+.transcation{
+    margin-left: 200px;
+}
