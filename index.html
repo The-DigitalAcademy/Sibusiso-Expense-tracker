@@ -17,17 +17,17 @@
     <br><br><br>
 
     <input type="number" id="amount" placeholder="Enter your amount">
-    <button class="btn2" id="expense" onclick="addexpense()">Add Expense</button>
+    <button class="btn2" id="expense" onclick="addExpense()">Add Expense</button>
 
     <div class="display">
-      <h3>Balance</h3><span>R4 000</span>
-      <h3>Income</h3><span>R1 300</span>
-      <h3>Expense</h3><span>R3 200</span>
+      <h3>Balance</h3><span id="balance">R4 000</span>
+      <h3>Income</h3><span id="income">R1 300</span>
+      <h3>Expense</h3><span id="expense">R3 200</span>
     </div>
           <br><br>
 
     <div class="table">
-      <table style="width:480px">
+      <table id="itemsData" style="width:480px">
         <tr>
           <th>Items</th>
           <th>Type</th>
