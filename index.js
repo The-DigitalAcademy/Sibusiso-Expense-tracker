@@ -1,26 +1,32 @@
 var state = {
-    balance: 400,
-    income: 0,
-    expense: 0,
-    item: [
-        {items: 'Salary', type: 'Income', amount: 'R7 000'},
-        {items: 'Bus fare', type: 'Expense', amount: 'R200'},
-        {items: 'Foods', type: 'Expense', amount: 'R1 000'}
+    balance: 500,
+    income: 600,
+    expense: 10,
+    names: [],
+    items: [
+        {item: 'Salary', type: 'income', amount: 7000 },
+        {item: 'Bus fare', type: 'expense', amount: 200 },
+        {item: 'Foods', type: 'expense', amount: 1000 }
     ]
 }
 
-var balanceState = document.getElementById('balance');
-var incomeState = document.getElementById('income');
-var expenseState = document.getElementById('expense');
-var itemState = document.getElementById('item')
-var inputState = document.getElementById('input');
-var amountState = document.getElementById('amount')
+var balanceSt = document.getElementById('balance');
+var incomeSt = document.getElementById('income');
+var expenseSt = document.getElementById('expense');
+var itemsSt = document.getElementById('itemsDisplay')
+// var inputSt = document.getElementById('input');
+// var amountSt = document.getElementById('amount')
+
+function addIncome() {
+    console.log('hjbvhgg')
+}
 
 // run browser for internt
 function browser() {
-    console.log('the project started')
+    balanceSt.innerHTML = `R${state.balance}`
+    incomeSt.innerHTML = `R${state.income}`
+    expenseSt.innerHTML = `R${state.expense}`
 }
-
 browser();
 
 
