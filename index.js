@@ -1,5 +1,5 @@
 var state = {
-    names: [],
+    array: [],
     balance: 0,
     income: 0,
     expense: 0,
@@ -11,9 +11,9 @@ var state = {
 }
 
 var balanceState = document.getElementById('balance');
-var balanceState = document.getElementById('income');
-var balanceState = document.getElementById('expense');
-var balanceState = document.getElementById('itemsData')
+var incomeState = document.getElementById('income');
+var expenseState = document.getElementById('expense');
+var itemsState = document.getElementById('itemsData')
 
 
 function addIncome() {
@@ -24,10 +24,9 @@ function addIncome() {
         return
     }
 
-    state.names.push(input)
+    state.array.push(input)
     document.getElementById('input').value = ''
-
-    console.log(input);
+    
 }
 
 function addExpense() {
@@ -38,13 +37,16 @@ function addExpense() {
         return
     }
 
-    state.names.push(amount)
+    state.array.push(amount)
     document.getElementById('amount').value = ''
 
-    console.log(amount);
 }
 
 //run for browser
 
-function broswer() {}
+function broswer() {
+    balanceState.innerHTML = `R${state.balance}`
+    incomeState.innerHTML = `R${state.income}`
+    expenseState.innerHTML = `R${state.expense}`
+}
 broswer();
