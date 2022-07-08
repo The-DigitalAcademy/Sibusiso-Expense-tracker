@@ -1,6 +1,5 @@
 var state = {
-    array: [],
-    balance: 1000,
+    balance: 3000,
     income: 0,
     expense: 0,
     items: [
@@ -24,8 +23,9 @@ function addIncome() {
         return
     }
 
-    state.array.push(input)
+    state.items.push(input)
     document.getElementById('input').value = ''
+
     
 }
 
@@ -37,8 +37,9 @@ function addExpense() {
         return
     }
 
-    state.array.push(amount)
+    state.items.push(amount)
     document.getElementById('amount').value = ''
+
 
 }
 
@@ -48,5 +49,31 @@ function browser() {
     balanceState.innerHTML = `R${state.balance}`
     incomeState.innerHTML = `R${state.income}`
     expenseState.innerHTML = `R${state.expense}`
+
+    itemsData = document.getElementById('itemsData') 
+
+    itemsData.innerHTML = `<table>
+    <tr>
+          <th>Items</th>
+          <th>Type</th>
+          <th>Amount</th>
+    </tr>
+     <tr>
+        <td>Cash</td>
+        <td>Income</td>
+        <td>R2 000</td>
+        </tr>
+
+        <tr>
+        <td>Bus fare</td>
+        <td>Expense</td>
+        <td>R1 000</td>
+        </tr>
+    </table>`
+
+    for (let i = 0; i < state.items.length; i++) {
+        itemsData.innerHTML += ``
+        
+    }
 }
 browser();
