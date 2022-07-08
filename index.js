@@ -69,6 +69,12 @@ function browser() {
         <td>Expense</td>
         <td>R1 000</td>
         </tr>
+
+        <tr>
+        <td>Lunch</td>
+        <td>Expense</td>
+        <td>R500</td>
+        </tr>
     </table>`
 
     for (let i = 0; i < state.items.length; i++) {
