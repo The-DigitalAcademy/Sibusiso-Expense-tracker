@@ -9,9 +9,9 @@ var state = {
     ]
 }
 
-var balanceState = document.getElementById('balance');
-var incomeState = document.getElementById('income');
-var expenseState = document.getElementById('expense');
+var balanceState = document.getElementById('balanceTotal');
+var incomeState = document.getElementById('incomeTotal');
+var expenseState = document.getElementById('expenseTotal');
 var itemsState = document.getElementById('itemsData')
 
 
@@ -22,20 +22,23 @@ function addIncome() {
         alert('Please fill in the empty')
         return
     } else {
-        if (Vaild(amount) && Valid(state)) {
-            items.push({
-                item: itemsData.length + 1,
-                item
+
+        if (Vaild(amount) && Valid(state.items)) {
+            state.items.push({
+                name: state.items.length + 1,
                 type: 'Income',
-                amount
+                amount,
             });
         }
+        
     }
 
     state.items.push(input)
     document.getElementById('input').value = ''
 
-    
+    console.log(state.items)
+
+    browser();
 }
 
 function addExpense() {
@@ -44,11 +47,21 @@ function addExpense() {
     if (amount == '') {
         alert('Please fill in the empty')
         return
-    }
+    } else {
+
+        if (Vaild(amount) && Valid(state.items)) {
+            state.items.push({
+                name: state.items.length + 1,
+                type: 'Expense',
+                amount,
+            });
+        }
+
+    }    
 
     state.items.push(amount)
     document.getElementById('amount').value = ''
-
+    browser();
 
 }
 
@@ -67,27 +80,14 @@ function browser() {
           <th>Type</th>
           <th>Amount</th>
     </tr>
-     <tr>
-        <td>Cash</td>
-        <td>Income</td>
-        <td>R3 000</td>
-        </tr>
-
-        <tr>
-        <td>Bus fare</td>
-        <td>Expense</td>
-        <td>R1 000</td>
-        </tr>
-
-        <tr>
-        <td>Lunch</td>
-        <td>Expense</td>
-        <td>R500</td>
-        </tr>
     </table>`
 
     for (let i = 0; i < state.items.length; i++) {
-        itemsData.innerHTML += ''
+        itemsData.innerHTML += `<table>
+        <td>${state.items[i].name}</td>
+        <td>${state.items[i].type}</td>
+        <td>${state.items[i].amount}</td>
+        </table>`
         
     }
 }
