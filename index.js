@@ -21,6 +21,15 @@ function addIncome() {
     if (input == '') {
         alert('Please fill in the empty')
         return
+    } else {
+        if (Vaild(amount) && Valid(state)) {
+            items.push({
+                item: itemsData.length + 1,
+                item
+                type: 'Income',
+                amount
+            });
+        }
     }
 
     state.items.push(input)
@@ -46,9 +55,9 @@ function addExpense() {
 //run for browser
 
 function browser() {
-    balanceState.innerHTML = `R${state.balance}`
-    incomeState.innerHTML = `R${state.income}`
-    expenseState.innerHTML = `R${state.expense}`
+    balanceState.innerHTML = `R${state.balanceTotal}`
+    incomeState.innerHTML = `R${state.incomeTotal}`
+    expenseState.innerHTML = `R${state.expenseTotal}`
 
     itemsData = document.getElementById('itemsData') 
 
@@ -61,7 +70,7 @@ function browser() {
      <tr>
         <td>Cash</td>
         <td>Income</td>
-        <td>R2 000</td>
+        <td>R3 000</td>
         </tr>
 
         <tr>
@@ -78,7 +87,7 @@ function browser() {
     </table>`
 
     for (let i = 0; i < state.items.length; i++) {
-        itemsData.innerHTML += ``
+        itemsData.innerHTML += ''
         
     }
 }
