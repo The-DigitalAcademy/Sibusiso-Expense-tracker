@@ -5,8 +5,9 @@ var state = {
     items: []
 } 
 
-function addIncome() {
 
+
+function addIncome() {
     var input = document.getElementById('input').value
 
     if (input == '') {
@@ -17,20 +18,37 @@ function addIncome() {
     state.items.push(input);
     document.getElementById('input').value = '';
 
-    console.log(state.items)
+
+    // console.log(input);
+
+    browser();
 }
 
 function addExpense() {
-
     var amount = document.getElementById('amount').value
 
     if (amount == '') {
         alert('Please fill in the empty');
         return
-    }    
+    }  
 
     state.items.push(amount);
     document.getElementById('amount').value = '';
+
+    browser();
+}
+
+function calculate() {
+    for (let i = 0; i < state.items.length; i++) {
+        if (items[i].type == 'Income') {
+            income += state.items[i].amount;
+        }
+        if (items[i].type == 'Expense') {
+            expense += state.items[i].amount;
+        }
+    }
+
+    balanceTotal = incomeTotal - expenseTotal;
 }
 
 //run for browser
@@ -40,7 +58,7 @@ function browser() {
     var balanceState = document.getElementById('balanceTotal');
     var incomeState = document.getElementById('incomeTotal');
     var expenseState = document.getElementById('expenseTotal');
-    var itemsState = document.getElementById('itemsData');
+
 
     itemsData = document.getElementById('itemsData');
 
@@ -65,7 +83,7 @@ function browser() {
 
     balanceState.innerHTML = `R${state.balanceTotal}`;
     incomeState.innerHTML = `R${state.incomeTotal}`;
-    expenseState.innerHTML = `R${state.expenseTotal}`
+    expenseState.innerHTML = `R${state.expenseTotal}`;
 }
 
 browser();
