@@ -11,6 +11,13 @@ body{
 
 .app{
     text-align: center;
+    margin-left: 600px;
+    margin-top: 50px;
+    height: 700px;
+    width: 500px;
+    border: solid 5px gray;
+    padding: 5px;
+    box-shadow: 0px 1px 0px 1px gray;
 }
 
 #input{
@@ -55,7 +62,6 @@ body{
     width: 450px;
     border: solid 3px gray;
     padding: 20px;
-    margin-left: 600px;
 }
 
 .display h3{
@@ -69,15 +75,9 @@ body{
     font-weight: 800;
 }
 
-.table{
-    padding: 10px;
-    margin-left: 600px;
-    
-    
-}
-
 table, th, td{
     border: solid 1px grey;
+    padding: 1px;
 }
 
 .btn1:hover{
