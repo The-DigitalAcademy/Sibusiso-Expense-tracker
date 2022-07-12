@@ -18,9 +18,6 @@ function addIncome() {
     state.items.push(input);
     document.getElementById('input').value = '';
 
-
-    // console.log(input);
-
     browser();
 }
 
