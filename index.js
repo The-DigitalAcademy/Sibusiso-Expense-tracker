@@ -1,65 +1,94 @@
-var state = {
-    balanceTotal: 3000,
-    incomeTotal: 0,
-    expenseTotal: 0,
-    items: []
-} 
+var income = 0;
+var expense = 0;
+var balance = 0;
+var items = [];
 
+var itemsTable;
 
+var inputS;
+var amountS;
+
+function link(value) {
+    if (!value) {
+      return false;
+    }
+    return true;
+  }
+
+function inputState() {
+    amountS = Number (document.getElementById('amount').value);
+    inputS = document.getElementById('itemsName').value;
+}
+
+function clearAllinput() {
+    document.getElementById('itemsName').value = '';
+    document.getElementById('amount').value = '';
+}
 
 function addIncome() {
-    var input = document.getElementById('input').value
+    inputState();
 
-    if (input == '') {
-        alert('Please fill in the empty');
-        return
+    if (link(amountS) && link(inputS)) {
+            items.push({
+            item: inputS,
+            type: 'Income', 
+            amount: amountS,
+        });
+
+        calculate();
+        clearAllinput();
+    } else {
+      alert('Please fill in the empty');
     }
-
-    state.items.push(input);
-    document.getElementById('input').value = '';
 
     browser();
 }
 
 function addExpense() {
-    var amount = document.getElementById('amount').value
+    inputState();
 
-    if (amount == '') {
-        alert('Please fill in the empty');
-        return
-    }  
+    if (link(amountS) && link(inputS)) {
+            items.push({
+            item: inputS,
+            type: 'Expense', 
+            amount: amountS,
+        });
 
-    state.items.push(amount);
-    document.getElementById('amount').value = '';
+        calculate();
+        clearAllinput();
+    } else {
+      alert('Please fill in the empty');
+    }
 
     browser();
 }
 
 function calculate() {
-    for (let i = 0; i < state.items.length; i++) {
+    income = 0;
+    expense = 0;
+    balance = 0;
+
+    for (let i = 0; i < items.length; i++) {
         if (items[i].type == 'Income') {
-            income += state.items[i].amount;
+            income += items[i].amount;
         }
         if (items[i].type == 'Expense') {
-            expense += state.items[i].amount;
+            expense += items[i].amount;
         }
     }
 
-    balanceTotal = incomeTotal - expenseTotal;
+    balance = income - expense;
 }
 
-//run for browser
-
+//run for display in browser
 function browser() {
 
-    var balanceState = document.getElementById('balanceTotal');
-    var incomeState = document.getElementById('incomeTotal');
-    var expenseState = document.getElementById('expenseTotal');
+    var balanceTotal = document.getElementById('balanceTotal');
+    var incomeTotal = document.getElementById('incomeTotal');
+    var expenseTotal = document.getElementById('expenseTotal');
+    itemsTable = document.getElementById('itemsTable');
 
-
-    itemsData = document.getElementById('itemsData');
-
-    itemsData.innerHTML = `<table>
+    itemsTable.innerHTML = `<table>
     <tr>
           <th>Item</th>
           <th>Type</th>
@@ -67,20 +96,21 @@ function browser() {
     </tr>
     </table>`;
 
-    for (let i = 0; i < state.items.length; i++) {
-        itemsData.innerHTML += 
+    for (let i = 0; i < items.length; i++) {
+        itemsTable.innerHTML += 
         
         `<table>
-        <td>${state.items[i].item}</td>
-        <td>${state.items[i].type}</td>
-        <td>${state.items[i].amount}</td>
+
+        <td>${items[i].item}</td>
+        <td>${items[i].type}</td>
+        <td>${items[i].amount}</td>
+
         </table>`;
-        
     }
 
-    balanceState.innerHTML = `R${state.balanceTotal}`;
-    incomeState.innerHTML = `R${state.incomeTotal}`;
-    expenseState.innerHTML = `R${state.expenseTotal}`;
+    incomeTotal.innerHTML = `R${income}`;
+    expenseTotal.innerHTML = `R${expense}`;
+    balanceTotal.innerHTML = `R${balance}`;
 }
 
 browser();

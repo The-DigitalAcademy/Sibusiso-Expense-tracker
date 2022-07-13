@@ -20,7 +20,7 @@ body{
     box-shadow: 0px 1px 0px 1px gray;
 }
 
-#input{
+#itemsName{
     width: 250px;
     padding: 5px;
     border: none;
