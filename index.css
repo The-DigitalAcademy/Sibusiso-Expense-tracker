@@ -62,22 +62,27 @@ body{
     width: 450px;
     border: solid 3px gray;
     padding: 20px;
+    background-color: whitesmoke;
 }
 
 .display h3{
     margin-top: 2px;
     padding: 15px;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .display span{
     margin-bottom: 2px;
     font-weight: 800;
+    font-size: 20px;
+    
 }
 
 table, th, td{
     border: solid 1px grey;
     padding: 1px;
+    background-color: white;
 }
 
 .btn1:hover{
@@ -93,4 +98,12 @@ table, th, td{
 .details span{
     font-size: 23px;
     font-weight: bold;
+}
+
+.green{
+    color: rgb(90, 139, 17);
+}
+
+.red{
+    color: red;
 }
