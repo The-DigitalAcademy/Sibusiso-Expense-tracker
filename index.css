@@ -82,7 +82,7 @@ body{
 table, th, td{
     border: solid 1px grey;
     padding: 1px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .btn1:hover{
