@@ -14,7 +14,7 @@ body{
     margin-left: 600px;
     margin-top: 50px;
     height: 700px;
-    width: 500px;
+    width: 550px;
     border: solid 5px gray;
     padding: 5px;
     box-shadow: 0px 1px 0px 1px gray;
@@ -22,14 +22,14 @@ body{
 
 #itemsName{
     width: 250px;
-    padding: 5px;
+    padding: 8px;
     border: none;
     border-radius: 2px;
 }
 
 #amount{
     width: 250px;
-    padding: 5px;
+    padding: 8px;
     border: none;
     border-radius: 2px;
 }
@@ -37,7 +37,7 @@ body{
 .btn1{
     margin-left: 50px;
     width: 150px;
-    height: 30px;
+    height: 39px;
     font-weight: bold;
     font-size: 15px;
     background-color: greenyellow;
@@ -48,7 +48,7 @@ body{
 .btn2{
     margin-left: 50px;
     width: 150px;
-    height: 30px;
+    height: 39px;
     font-weight: bold;
     font-size: 15px;
     background-color: red;
@@ -57,32 +57,32 @@ body{
 }
 
 .display{
-    display: flex;
     margin-top: 30px;
-    width: 450px;
-    border: solid 3px gray;
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    border: solid grey;
+    width: 480px;
     padding: 20px;
-    background-color: whitesmoke;
 }
 
 .display h3{
-    margin-top: 2px;
-    padding: 15px;
     font-weight: bold;
     font-size: 25px;
+    margin-left: 20px;
 }
 
-.display span{
-    margin-bottom: 2px;
-    font-weight: 800;
+.display a{
+    font-weight: bold;
     font-size: 20px;
-    
+    margin-top: 70px;
 }
 
 table, th, td{
     border: solid 1px grey;
     padding: 1px;
     background-color: whitesmoke;
+    height: 25px;
 }
 
 .btn1:hover{

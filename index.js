@@ -90,9 +90,9 @@ function browser() {
 
     itemsTable.innerHTML = `<table>
     <tr>
-          <th>Item</th>
-          <th>Type</th>
-          <th>Amount</th>
+          <th scope="col">Item</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
     </tr>
     </table>`;
 
