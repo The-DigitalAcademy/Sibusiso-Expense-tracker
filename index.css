@@ -20,7 +20,8 @@ body{
 .app{
     background: gainsboro;
     text-align: center;
-    margin-left: 600px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     height: 750px;
     width: 550px;
@@ -102,8 +103,8 @@ th{
 }
 
 .table{
-    height: 270px;
-    width: 528px;
+    height: 280px;
+    width: 540px;
     overflow-y: scroll;
 }
 
