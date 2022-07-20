@@ -16,7 +16,7 @@ function clearAlldata() {
     if (window.confirm('Clear all your transaction?')) {
         items = [];
         calculate();
-        browser();
+        displayonScreen();
     }
 }
 
@@ -53,7 +53,7 @@ function addIncome() {
       alert('Please fill in the empty');
     }
 
-    browser();
+    displayonScreen();
 }
 
 function addExpense() {
@@ -72,7 +72,7 @@ function addExpense() {
       alert('Please fill in the empty');
     }
 
-    browser();
+    displayonScreen();
 }
 
 function calculate() {
@@ -93,7 +93,7 @@ function calculate() {
 }
 
 //run for display in browser
-function browser() {
+function displayonScreen() {
     var balanceTotal = document.getElementById('balanceTotal');
     var incomeTotal = document.getElementById('incomeTotal');
     var expenseTotal = document.getElementById('expenseTotal');
@@ -124,4 +124,4 @@ function browser() {
     balanceTotal.innerHTML = `R${balance}`;
 }
 
-browser();
+displayonScreen();
