@@ -8,6 +8,18 @@ var itemsTable;
 var inputS;
 var amountS;
 
+function clearAlldata() {
+    if (items.length == 0) {
+        alert('Please fill in the empty');
+        return;
+    }
+    if (window.confirm('Clear all your transaction?')) {
+        items = [];
+        calculate();
+        browser();
+    }
+}
+
 function link(value) {
     if (!value) {
       return false;
@@ -82,7 +94,6 @@ function calculate() {
 
 //run for display in browser
 function browser() {
-
     var balanceTotal = document.getElementById('balanceTotal');
     var incomeTotal = document.getElementById('incomeTotal');
     var expenseTotal = document.getElementById('expenseTotal');
